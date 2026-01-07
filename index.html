@@ -5,40 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Processus Analytica Inmobiliaria</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Definimos tus colores institucionales exactos */
+        .bg-processus-red { background-color: #E30647; }
+        .text-processus-red { color: #E30647; }
+        .bg-processus-blue { background-color: #1D4586; }
+        .border-processus-red { border-color: #E30647; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
-    <nav class="bg-white shadow-sm p-4 sticky top-0 z-50">
+<body class="bg-gray-50 text-slate-900 font-sans">
+
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50 border-b-2 border-processus-red">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-800">Processus <span class="text-slate-500 font-light italic text-lg">SRL</span></h1>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#" class="hover:text-blue-600 transition">Market Intelligence</a>
-                <a href="#" class="hover:text-blue-600 transition">Inversiones</a>
-                <a href="#" class="hover:text-blue-600 transition font-bold text-blue-700 underline">Propiedades</a>
+            <div class="flex items-center space-x-2">
+                <div class="font-bold text-2xl tracking-tighter">
+                    <span class="text-processus-red">PROCESSUS</span> 
+                    <span class="text-processus-blue italic">S.R.L.</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-wide">
+                <a href="#" class="text-slate-600 hover:text-processus-red transition">Market Intelligence</a>
+                <a href="#" class="text-slate-600 hover:text-processus-red transition">Inversiones</a>
+                <a href="#" class="bg-processus-red text-white px-4 py-2 rounded shadow-sm">Propiedades</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-blue-900 text-white py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Inteligencia de Mercado Inmobiliaria</h2>
-            <p class="text-xl text-blue-100 italic">"18 años de consultoría transformados en datos para tu inversión."</p>
+    <header class="bg-processus-blue text-white py-24 px-4 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 -mr-20 -mt-20 transform rotate-45"></div>
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h2 class="text-5xl md:text-6xl font-black mb-6 drop-shadow-lg">Inteligencia de Mercado Inmobiliaria</h2>
+            <p class="text-xl md:text-2xl text-blue-100 italic font-light">
+                "18 años de consultoría transformados en datos para tu inversión."
+            </p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto p-8">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600">
-                <h3 class="font-bold text-lg mb-2">Análisis de Plusvalía</h3>
-                <p class="text-sm text-gray-600 italic">Datos históricos exclusivos de la zona.</p>
-                <div class="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div class="bg-blue-600 h-full w-[75%]"></div>
+    <main class="max-w-7xl mx-auto p-8 -mt-12">
+        <div class="grid md:grid-cols-2 gap-10">
+            
+            <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-processus-red">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h4 class="font-black text-2xl text-processus-blue">Plusvalía Proyectada</h4>
+                        <p class="text-slate-400 text-sm uppercase tracking-widest font-bold">Series Históricas 2008-2026</p>
+                    </div>
+                    <span class="bg-processus-red text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">LIVE DATA</span>
+                </div>
+                
+                <div class="flex items-end space-x-3 h-48 mb-6 border-b border-gray-100 pb-2">
+                    <div class="bg-gray-200 w-full h-[30%] rounded-t transition-all hover:bg-processus-red cursor-pointer" title="2022"></div>
+                    <div class="bg-gray-200 w-full h-[45%] rounded-t transition-all hover:bg-processus-red cursor-pointer" title="2023"></div>
+                    <div class="bg-gray-200 w-full h-[65%] rounded-t transition-all hover:bg-processus-red cursor-pointer" title="2024"></div>
+                    <div class="bg-processus-red w-full h-[95%] rounded-t shadow-lg" title="2025 (Projected)"></div>
+                </div>
+                <div class="flex justify-between text-xs font-black text-slate-400">
+                    <span>2022</span><span>2023</span><span>2024</span><span class="text-processus-red">2026(P)</span>
                 </div>
             </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-processus-blue">
+                <h4 class="font-black text-2xl text-processus-blue mb-4">Valuador de Inversión</h4>
+                <p class="text-slate-500 mb-8">Nuestra IA evalúa la viabilidad técnica de tu proyecto en segundos basándose en datos reales de **Processus SRL**.</p>
+                
+                <div class="space-y-4">
+                    <label class="block text-xs font-bold text-slate-400 uppercase">Monto de Inversión Estimado (USD)</label>
+                    <input type="number" placeholder="Ej: 150,000" class="w-full border-2 border-gray-100 p-4 rounded-lg outline-none focus:border-processus-blue transition text-xl font-bold">
+                    <button class="w-full bg-processus-red text-white font-black py-4 rounded-lg shadow-lg hover:bg-red-700 transition-all transform hover:-translate-y-1 uppercase tracking-wider">
+                        Calcular Viabilidad Técnica
+                    </button>
+                </div>
             </div>
+
+        </div>
     </main>
 
-    <footer class="text-center py-10 text-gray-400 text-sm">
-        © 2026 Processus SRL - Todos los derechos reservados.
+    <footer class="bg-slate-900 text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center opacity-80">
+            <p class="font-bold">PROCESSUS S.R.L. <span class="font-light italic">Consultora</span></p>
+            <p class="text-sm">© 2026 Santa Cruz, Bolivia. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
 </body>
 </html>
